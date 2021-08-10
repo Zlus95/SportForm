@@ -1,0 +1,114 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.titlelogo {
+  font-size: 40px;
+  margin-left: 30px;
+  text-shadow: 2px 2px 0 #5ca7c2, 2px -2px 0 #5ca7c2, -2px 2px 0 #5ca7c2, -2px -2px 0 #5ca7c2, 2px 0px 0 #5ca7c2, 0px 2px 0 #5ca7c2, -2px 0px 0 #5ca7c2, 0px -2px 0 #5ca7c2;
+  color: #ffffff;
+}
+
+.publics {
+  height: 300px;
+  width: 300px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 10px 10px 0px 10px;
+  background-image: url('./img/297-2973691_post-it-png-download-emmanuel-faith-tabernacle\ \(1\).png');
+  background-size: 250px 250px;
+  font-size: 14px;
+  text-align: center;
+  /* font-style: italic; */
+  border: blueviolet solid 1px;
+}
+
+.titletop {
+  margin-top: 20px;
+  font-size: 18px;
+  text-decoration: tomato;
+}
+
+/* .authForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.login {
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+.color {
+  color: #5ca7c2;
+  text-decoration: none;
+ margin-right: 40px;
+ margin-left: 30px;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+li {
+  margin-right: 30px;
+  border: rgb(101, 182, 177) solid 1px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(101, 182, 177);
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.form {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .authBtn {
+   background-color: rgb(241, 244, 189);
+   margin-top: 5px;
+   border-radius: 5px;
+   border: rgb(231, 232, 201) solid 3px;
+   width: 100px;
+   color: rgb(42, 126, 121);
+ }
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+.
+
