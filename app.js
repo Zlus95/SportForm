@@ -6,6 +6,7 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const indexRouter = require('./routes/indexRouter');
 const authRouter = require('./routes/authRouter');
+const adminRouter = require('./routes/adminRouter');
 const { sessionMiddle, checkSession } = require('./middleware/middleware');
 const connect = require('./db/connect');
 const app = express();
@@ -30,6 +31,7 @@ app.use(morgan('dev'));
 app.use(session(sessionConfig));
 app.use(sessionMiddle);
 
+
 // middleware для создания админа во все hbs
 // app.use((req, res, next) => {
 //   if (req.session.admin_id) {
@@ -41,6 +43,7 @@ app.use(sessionMiddle);
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
+app.use('/admin',checkSession, adminRouter);
 
 // app.all('*', (req, res, next) => {
 //   const err = new Error('Page Not Found');
@@ -54,6 +57,6 @@ app.use('/auth', authRouter);
 // });
 
 app.listen(process.env.PORT, () => {
-  // connect();
+  connect();
   console.log('Подключение прошло успешно');
 });

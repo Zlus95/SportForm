@@ -5,6 +5,13 @@
   text-align: center;
   align-items: center;
 }
+.divbody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 
 header {
   display: flex;
