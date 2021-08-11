@@ -3,39 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="yandex-verification" content="87ccf3e243221bf6" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="description"
+    content="Конструктор футбольной формы онлайн. Вы можете создать футбольную форму со своим дизайном. ID Sportego футбольная форма высокого качества на заказ.">
+  <meta name="keywords" content="Главная Конструктор футбольной формы Sportego | Создай свой дизайн ">
   <script defer src="/js/application.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="/template/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/template/css/bootstrap.min.css" type="text/css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/template/css/custom.css" type="text/css">
+  <link rel="stylesheet" href="/template/css/bootstrap.min.css" type="text/css">
   <link rel="stylesheet" href="/css/style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-  <title>Ptoject</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <title>Конструктор футбольной формы Sportego | Создай свой дизайн </title>
 </head>
-
 <body>
   <header>
     <nav class="navbar navbar-expand-lg ">
-      <ul class="navbar-nav">
-        <div class="weather">
-          <div class="city "></div>
-          <div class="degree "></div>
-          <i class="fas fa-cloud"></i>
-        </div>
-        <div><a class="navbar-brand menu-link titlelogo" href="/">Project</a></div>
-      </ul>
-      <div class="line">
+  
+      {{!-- <div class="contacts">
+        <ul>
+          <li><a href="#dostavka" data-toggle="modal" data-toggle="#dostavka">Доставка</a></li>
+          <li><a href="#oplata" data-toggle="modal" data-toggle="#oplata">Оплата</a></li>
+          <li><a href="#contacts" data-toggle="modal" data-toggle="#contacts">Контакты</a></li>
+        </ul>
+      </div>
+    </nav> --}}
+  </header>
+
+  {{{body}}}
+
+<footer>
+  <div class="line">
         {{#if isLogin}}
         <a id="logout" class="menu-link color" href="/auth/logout">Выйти</a>
         {{else}}
         <a id="login" class="menu-link color" href="/auth/login">Войти</a>
         {{/if}}
       </div>
-    </nav>
-  </header>
-  <div class="divbody">
-    {{{body}}}
-
-  </div>
+</footer>
 </body>
 
 </html>
