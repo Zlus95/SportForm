@@ -54,6 +54,6 @@ app.use('/auth', authRouter);
 // });
 
 app.listen(process.env.PORT, () => {
-  connect();
+  // connect();
   console.log('Подключение прошло успешно');
 });

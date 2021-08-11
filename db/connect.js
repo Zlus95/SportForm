@@ -9,10 +9,10 @@ const options = {
   useNewUrlParser: true,
 };
 
-function connect() {
-  mongoose.connect(dbUrl, options)
-    .then(() => console.log('MONGODB CONNECTED...'))
-    .catch((err) => console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', err));
-}
+// function connect() {
+//   mongoose.connect(dbUrl, options)
+//     .then(() => console.log('MONGODB CONNECTED...'))
+//     .catch((err) => console.log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>', err));
+// }
 
 module.exports = connect;
