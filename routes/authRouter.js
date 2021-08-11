@@ -1,45 +1,26 @@
 const express = require('express');
-const User = require('../db/model/userModel');
+const Admin = require('../db/model/adminModel');
 
 const router = express.Router();
 
 
-router.route('/signup')
-  .get((req, res) => {
-    res.render('signup');
-  })
-  .post(async (req, res) => {
-    const { username, email, password } = req.body;
-    const oldUser = await User.findOne({ email: req.body.email });
-    if(!oldUser){
-      const user = await User.create({ username, email, password });
-      req.session.username = user.username;
-      req.session.useremail = user.email;
-      res.redirect('/');
-    } else {
-      const error = {
-        message: 'Такой пользователь существует'
-      };
-      res.render('signup', { error });
-    }
-  });
 
 router.route('/login')
-  .get((req, res) => {
-    res.render('login');
+.get((req, res) => {
+  res.render('login');
   })
   .post(async (req, res) => {
-    const user = await User.findOne({ email: req.body.email });
-    if (user) {
-      if (user.password !== req.body.password) {
+    const admin = await Admin.findOne({ login: req.body.login });
+    if (admin) {
+      if (admin.password !== req.body.password) {
+        // console.log("jdnslkshjkshg");
         const error = {
           message: 'Неверно введен пароль'
         };
-        res.render('login', { error });
+        return res.render('login', { error });
       }
-      req.session.username = user.username;
-      req.session.useremail = user.email;
-      res.redirect('/');
+      req.session.isLogin = true;
+      res.redirect('/admin');
     } else {
       const error = {
         message: 'Неверно введена почта или пользователь не зарегистрирован'
@@ -48,8 +29,30 @@ router.route('/login')
     }
   });
 
-router.get('/logout', (req,res) => {
+  router.get('/logout', (req,res) => {
   req.session.destroy();
   res.redirect('/');
 })
+
+
 module.exports = router;
+
+// router.route('/signup')
+//   .get((req, res) => {
+//     res.render('signup');
+//   })
+//   .post(async (req, res) => {
+//     const { username, email, password } = req.body;
+//     const oldAdmin = await Admin.findOne({ email: req.body.email });
+//     if(!oldAdmin){
+//       const user = await Admin.create({ username, email, password });
+//       req.session.username = user.username;
+//       req.session.useremail = user.email;
+//       res.redirect('/');
+//     } else {
+//       const error = {
+//         message: 'Такой пользователь существует'
+//       };
+//       res.render('signup', { error });
+//     }
+//   });

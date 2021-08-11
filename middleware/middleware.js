@@ -1,13 +1,13 @@
 const sessionMiddle = (req, res, next) => {
-  res.locals.username = req.session?.username;
+  res.locals.isLogin = req.session?.isLogin;
   next();
 };
 
 const checkSession = (req, res, next) => {
-  if(res.locals.username = req.session?.username) {
+  if(req.session?.isLogin) {
     next();
   } else {
-    res.redirect('/auth/signup')
+    res.redirect('/')
   } // записывает в рес.локалс инфу из сессии
 };
 
