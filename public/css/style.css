@@ -4,15 +4,8 @@
   justify-content: center;
   text-align: center;
   align-items: center;
+  flex-wrap: wrap;
 }
-.divbody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
-
 header {
   display: flex;
   flex-direction: row;
@@ -20,24 +13,14 @@ header {
   align-items: center;
   margin-bottom: 20px;
 }
-
 .navbar {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
 }
-
-.titlelogo {
-  font-size: 40px;
-  margin-left: 30px;
-  text-shadow: 2px 2px 0 #5ca7c2, 2px -2px 0 #5ca7c2, -2px 2px 0 #5ca7c2, -2px -2px 0 #5ca7c2, 2px 0px 0 #5ca7c2, 0px 2px 0 #5ca7c2, -2px 0px 0 #5ca7c2, 0px -2px 0 #5ca7c2;
-  color: #ffffff;
-}
-
 .publics {
-  height: 300px;
+  height: 350px;
   width: 300px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content: space-between;
@@ -47,43 +30,30 @@ header {
   background-size: 250px 250px;
   font-size: 14px;
   text-align: center;
-  /* font-style: italic; */
   border: blueviolet solid 1px;
 }
-
 .titletop {
   margin-top: 20px;
   font-size: 18px;
   text-decoration: tomato;
 }
-
-/* .authForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
-
 .login {
   display: flex;
   flex-direction: row;
   color: white;
 }
-
 .color {
   color: #5ca7c2;
   text-decoration: none;
  margin-right: 40px;
  margin-left: 30px;
 }
-
 .input-group {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
 li {
   margin-right: 30px;
   border: rgb(101, 182, 177) solid 1px;
@@ -95,15 +65,13 @@ li {
   font-size: 20px;
   color: #ffffff;
 }
-
 .form {
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
- .authBtn {
+.authBtn {
    background-color: rgb(241, 244, 189);
    margin-top: 5px;
    border-radius: 5px;
@@ -111,19 +79,71 @@ li {
    width: 100px;
    color: rgb(42, 126, 121);
  }
+.image {
+   width: 298px;
+   height: 298px;
+}
+.oneForm {
+  height: 500px;
+  width: 500px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 10px 10px 0px 10px;
+  background-image: url('./img/297-2973691_post-it-png-download-emmanuel-faith-tabernacle\ \(1\).png');
+  background-size: 250px 250px;
+  font-size: 14px;
+  text-align: center;
+  border: blueviolet solid 1px;
+}
+.formImage{
+    width: 497px;
+    height: 497px;
+}
+.carusel {
+    display: flex;
+   flex-direction: row;
+}
+.caruselDiv {
+  height: 100px;
+  width: 100px;
+}
+.caruselImg {
+  height: 98px;
+  width: 98px;
+}
 
- 
+.bodyForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
- 
+  .formImage{
+    width: 498px;
+    height: 498px;
+  }
+.contact{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;  
 
+.orderForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
+.btnInBasket {
+  height: 50px;
+}
 
+.add {
+  display: flex;
+  flex-direction: column;
 
-
-
-
-
-
-
-.
-
+}

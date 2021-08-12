@@ -1,7 +1,8 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 
-const dbUrl = process.env.DB;
+const dbUrl = 'mongodb+srv://Anastasia:1231234@cluster0.pxr6y.mongodb.net/Project';
+console.log(dbUrl);
 const options = {
   useCreateIndex: true,
   useFindAndModify: false,

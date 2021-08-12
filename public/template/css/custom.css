@@ -77,13 +77,24 @@ main .wrapper {position: absolute; top: 0; z-index: 999;}
     font-size: 20px;
 }
 .nav-tabs {border-bottom: 0;}
-main .type-toggle, .main-title {
+/* main .type-toggle, .main-title {
     position: absolute;
     display: flex;
     height: 55vh;
     flex-direction: column;
     justify-content: center;
     z-index: 3;
+} */
+
+main .type-toggle, .main-title {
+  position: absolute;
+  display: flex;
+  height: 55vh;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 3;
+  flex-wrap: wrap;
+  align-content: flex-start;
 }
 
 main .type-toggle .type-icon{

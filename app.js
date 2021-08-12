@@ -7,6 +7,10 @@ const MongoStore = require('connect-mongo');
 const indexRouter = require('./routes/indexRouter');
 const authRouter = require('./routes/authRouter');
 const adminRouter = require('./routes/adminRouter');
+const orderRouter = require('./routes/orderRouter');
+const clothesRouter = require('./routes/clothesRouter');
+// const bootstrap = require('bootstrap')
+
 const { sessionMiddle, checkSession } = require('./middleware/middleware');
 const connect = require('./db/connect');
 const app = express();
@@ -31,7 +35,6 @@ app.use(morgan('dev'));
 app.use(session(sessionConfig));
 app.use(sessionMiddle);
 
-
 // middleware для создания админа во все hbs
 // app.use((req, res, next) => {
 //   if (req.session.admin_id) {
@@ -43,6 +46,8 @@ app.use(sessionMiddle);
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
+app.use('/order', orderRouter);
+app.use('/clothes', clothesRouter);
 app.use('/admin',checkSession, adminRouter);
 
 // app.all('*', (req, res, next) => {
