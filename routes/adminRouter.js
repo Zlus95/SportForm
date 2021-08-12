@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Orders = require("../db/model/orderModel");
-const Clothes = require("../db/model/clothesModel");
+
 
 router.get("/", async (req, res) => {
   const orders = await Orders.find().
