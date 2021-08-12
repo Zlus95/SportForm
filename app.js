@@ -9,6 +9,7 @@ const authRouter = require('./routes/authRouter');
 const adminRouter = require('./routes/adminRouter');
 const orderRouter = require('./routes/orderRouter');
 const clothesRouter = require('./routes/clothesRouter');
+// const bootstrap = require('bootstrap')
 
 const { sessionMiddle, checkSession } = require('./middleware/middleware');
 const connect = require('./db/connect');
