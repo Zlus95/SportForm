@@ -17,7 +17,7 @@ const orderSchema = Schema({
   },
   form: {
     type: Schema.Types.ObjectId,
-    ref: 'Form',
+    ref: 'preOrder',
     required: true,
   },
   userName: { type: String, required: true },
