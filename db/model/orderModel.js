@@ -19,8 +19,12 @@ const orderSchema = Schema({
   userName: {type: String, required: true},
   userEmail: {type: String, required: true},
   userPhone: {type: String, required: true},
-  price: {type: Number, required: true},
- 
+  player: [
+    price: {type: Number, required: true},
+    size: {type: Number, required: true},
+    lastName: {type: String, required: false},
+    number: {type: Number, required: false},
+  ],
 });
 
 const orderModel = model('Order', orderSchema);

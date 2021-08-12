@@ -21,6 +21,14 @@ header {
   margin-bottom: 20px;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .titlelogo {
   font-size: 40px;
   margin-left: 30px;
