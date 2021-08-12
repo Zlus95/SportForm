@@ -9,11 +9,8 @@ const authRouter = require('./routes/authRouter');
 const adminRouter = require('./routes/adminRouter');
 const orderRouter = require('./routes/orderRouter');
 const clothesRouter = require('./routes/clothesRouter');
-const basketRouter = require('./routes/basketRouter');
-
-// const bootstrap = require('bootstrap')
-
-const { sessionMiddle, checkSession } = require('./middleware/middleware');
+const cartRouter = require('./routes/cartRouter');
+const { sessionMiddle, checkSession, createCart } = require('./middleware/middleware');
 const connect = require('./db/connect');
 const app = express();
 
@@ -37,34 +34,15 @@ app.use(morgan('dev'));
 app.use(session(sessionConfig));
 app.use(sessionMiddle);
 
-// middleware для создания админа во все hbs
-// app.use((req, res, next) => {
-//   if (req.session.admin_id) {
-//     res.locals.admin = true;
-//     res.locals.adminName = req.session.adminName;
-//   }
-//   next();
-// });
-
-app.use('/', indexRouter);
-app.use('/auth', authRouter);
-app.use('/order', orderRouter);
-app.use('/clothes', clothesRouter);
-app.use('/basket', basketRouter);
+app.use('/', createCart, indexRouter);
+app.use('/auth', createCart, authRouter);
+app.use('/order', createCart, orderRouter);
+app.use('/clothes', createCart, clothesRouter);
+app.use('/cart', createCart, cartRouter);
 app.use('/admin',checkSession, adminRouter);
-
-// app.all('*', (req, res, next) => {
-//   const err = new Error('Page Not Found');
-//   err.status = 404;
-//   next(err);
-// });
-
-// app.use((err, req, res, next) => {
-//   const { status = 500, message = 'Something went wrong' } = err;
-//   res.status(status).render('error', { errStatus: status, errMessage: message });
-// });
 
 app.listen(process.env.PORT, () => {
   connect();
   console.log('Подключение прошло успешно');
 });
+ 
