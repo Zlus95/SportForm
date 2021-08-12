@@ -1,17 +1,9 @@
 const {Schema, model } = require('mongoose');
 
 const formSchema = Schema ({
-
   title: String, 
-
-  name:  {
-    type: String,
-    // required: true,
-  },
-  price: {
-    type: String,
-    // required: true,
-  },
+  name: String,
+  price: String,
   color: String,
   img: String,
 });

@@ -1,55 +1,34 @@
 const { Schema, model } = require('mongoose');
 
 const orderSchema = Schema({
-  orderNumber: Number,
+  status: {type: String, default: 'В обработке'},
+
   shirt: {
-
     type: Schema.Types.ObjectId,
-    ref: 'Clothes',
-    // required: true,
+    ref: 'preOrder',
   },
-  shorts:  {
-    type:Schema.Types.ObjectId,
-    ref: 'Clothes',
-    // required: true,
-  },
-  socks:  {
+  shorts: {
     type: Schema.Types.ObjectId,
-    ref: 'Clothes',
-    // required: true,
-
-    clothes: {
-      type: Schema.Types.ObjectId,
-      ref: 'Clothes',
-      required: true,
-    },
-    color: String,
+    ref: 'preOrder',
   },
-  shorts:  {
-    clothes: {
-      type: Schema.Types.ObjectId,
-      ref: 'Clothes',
-      required: true,
-    },
-    color: String,
+  socks: {
+    type: Schema.Types.ObjectId,
+    ref: 'preOrder',
   },
-  socks:  {
-    clothes: {
-      type: Schema.Types.ObjectId,
-      ref: 'Clothes',
-      required: true,
-    },
-    color: String,
-
+  form: {
+    type: Schema.Types.ObjectId,
+    ref: 'Form',
+    required: true,
   },
-  userName: {type: String, required: true},
-  userEmail: {type: String, required: true},
-  userPhone: {type: String, required: true},
+  userName: { type: String, required: true },
+  userEmail: { type: String, required: true },
+  userPhone: { type: String, required: true },
   player: [
-    price: {type: Number, required: true},
-    size: {type: Number, required: true},
-    lastName: {type: String, required: false},
-    number: {type: Number, required: false},
+    {
+      size: { type: String, required: true },
+      lastName: String,
+      number: String,
+    }
   ],
 });
 
