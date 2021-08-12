@@ -1,3 +1,5 @@
+const Card = require('../db/model/cartModel');
+
 const sessionMiddle = (req, res, next) => {
   res.locals.isLogin = req.session?.isLogin;
   next();
@@ -8,8 +10,20 @@ const checkSession = (req, res, next) => {
     next();
   } else {
     res.redirect('/')
-  } // записывает в рес.локалс инфу из сессии
+  } 
 };
 
+const createCart = async (req, res, next) => {
+  const card = await Card.findOne({ name: 'fjfjfgjfgxjgjgfjgxfj'});
+  if(card) {
+    next();
+  } else {
+    await Card.create({
+      name: 'fjfjfgjfgxjgjgfjgxfj',
+      shops: [],
+    });
+    next();
+  }
+};
 
-module.exports = { sessionMiddle, checkSession };
+module.exports = { sessionMiddle, checkSession, createCart };
