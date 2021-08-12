@@ -1,0 +1,13 @@
+<h1>admin</h1>
+    <div>
+      <div>Заказ № {{order._id}}</div>
+      <div>{{order.shirt.clothes.typeOfClothes}}: {{order.shirt.clothes.name}}, price: {{order.shirt.clothes.price}}, color: {{order.shirt.color}}</div>
+      <div>{{order.shorts.clothes.typeOfClothes}}: {{order.shorts.clothes.name}}, price: {{order.shorts.clothes.price}}, color: {{order.shorts.color}}</div>
+      <div>{{order.socks.clothes.typeOfClothes}}: {{order.socks.clothes.name}}, price: {{order.socks.clothes.price}}, color: {{order.socks.color}}</div>
+      <div>{{order.userEmail}}</div>
+      <div>{{order.userPhone}}</div>
+      <div>{{order.price}}</div>
+      {{#each order.players}}
+      <p>{{surname}},{{number}}, {{clothingSize}}</p>
+      {{/each}}
+    </div>
