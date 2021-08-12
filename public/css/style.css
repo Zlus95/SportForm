@@ -4,15 +4,9 @@
   justify-content: center;
   text-align: center;
   align-items: center;
-}
-.divbody {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-}
+  flex-wrap: wrap;
 
+}
 header {
   display: flex;
   flex-direction: row;
@@ -26,18 +20,10 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
-}
-
-.titlelogo {
-  font-size: 40px;
-  margin-left: 30px;
-  text-shadow: 2px 2px 0 #5ca7c2, 2px -2px 0 #5ca7c2, -2px 2px 0 #5ca7c2, -2px -2px 0 #5ca7c2, 2px 0px 0 #5ca7c2, 0px 2px 0 #5ca7c2, -2px 0px 0 #5ca7c2, 0px -2px 0 #5ca7c2;
-  color: #ffffff;
 }
 
 .publics {
-  height: 300px;
+  height: 350px;
   width: 300px;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   justify-content: space-between;
@@ -56,13 +42,6 @@ header {
   font-size: 18px;
   text-decoration: tomato;
 }
-
-/* .authForm {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 .login {
   display: flex;
@@ -112,18 +91,35 @@ li {
    color: rgb(42, 126, 121);
  }
 
- 
+ .image {
+   width: 298px;
+   height: 298px;
+  }
+  
 
- 
+  .oneForm {
+    height: 500px;
+    width: 500px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 10px 10px 0px 10px;
+    background-image: url('./img/297-2973691_post-it-png-download-emmanuel-faith-tabernacle\ \(1\).png');
+    background-size: 250px 250px;
+    font-size: 14px;
+    text-align: center;
+    /* font-style: italic; */
+    border: blueviolet solid 1px;
+  }
 
-
-
-
-
-
-
-
-
-
-.
-
+  .formImage{
+    width: 498px;
+    height: 498px;
+  }
+.contact{
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 50px;  
+}

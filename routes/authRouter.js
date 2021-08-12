@@ -1,9 +1,6 @@
 const express = require('express');
 const Admin = require('../db/model/adminModel');
-
 const router = express.Router();
-
-
 
 router.route('/login')
 .get((req, res) => {
@@ -32,27 +29,6 @@ router.route('/login')
   router.get('/logout', (req,res) => {
   req.session.destroy();
   res.redirect('/');
-})
-
+});
 
 module.exports = router;
-
-// router.route('/signup')
-//   .get((req, res) => {
-//     res.render('signup');
-//   })
-//   .post(async (req, res) => {
-//     const { username, email, password } = req.body;
-//     const oldAdmin = await Admin.findOne({ email: req.body.email });
-//     if(!oldAdmin){
-//       const user = await Admin.create({ username, email, password });
-//       req.session.username = user.username;
-//       req.session.useremail = user.email;
-//       res.redirect('/');
-//     } else {
-//       const error = {
-//         message: 'Такой пользователь существует'
-//       };
-//       res.render('signup', { error });
-//     }
-//   });
