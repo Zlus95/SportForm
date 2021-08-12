@@ -3,6 +3,21 @@ const { Schema, model } = require('mongoose');
 const orderSchema = Schema({
   orderNumber: Number,
   shirt: {
+
+    type: Schema.Types.ObjectId,
+    ref: 'Clothes',
+    // required: true,
+  },
+  shorts:  {
+    type:Schema.Types.ObjectId,
+    ref: 'Clothes',
+    // required: true,
+  },
+  socks:  {
+    type: Schema.Types.ObjectId,
+    ref: 'Clothes',
+    // required: true,
+
     clothes: {
       type: Schema.Types.ObjectId,
       ref: 'Clothes',
@@ -25,6 +40,7 @@ const orderSchema = Schema({
       required: true,
     },
     color: String,
+
   },
   userName: {type: String, required: true},
   userEmail: {type: String, required: true},

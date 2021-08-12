@@ -3,19 +3,25 @@ const {Schema, model} = require('mongoose');
 const clothesSchema = Schema ({
   name:  {
     type: String,
-    required: true,
+    // required: true,
   },
+
+  color:  {
+    type: String,
+    // required: true,
+  },
+  
   typeOfClothes:  {
     type: String,
-    required: true,
+    // required: true,
   },
   price: {
     type: Number,
-    required: true,
+    // required: true,
   },
   details:  {
     type: String,
-    required: false,
+    // required: false,
   },
 });
 

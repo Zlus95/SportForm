@@ -1,10 +1,11 @@
 const express = require('express');
-
+const Form = require('../db/model/formModel');
 const router = express.Router();
 
 
-router.get('/', (req, res) => {
-  res.render('index');
+router.get('/', async (req, res) => {
+const allForms = await Form.find();
+  res.render('index', { allForms });
 })
 
 
