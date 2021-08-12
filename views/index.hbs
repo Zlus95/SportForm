@@ -1,12 +1,6 @@
 <div class="body">
 
-  {{#each allForms}}
-  <a href="/clothes/{{this._id}}">
-    <div class="publics">
-      <img class="image" src="{{this.img}}">
-      <div>{{this.name}}</div>
-      <div>{{this.price}}</div>
-
+  
   <a href="/clothes/forms/{{firstF1._id}}">
     <div class="publics">
       <img class="image" src="{{firstF1.img}}">
@@ -94,13 +88,12 @@
       <div>Цена: {{firstShirtLong.price}}</div>
     </div>
   </a>
-   <a href="/clothes/shirts/{{firstShirtPolo._id}}">
+  <a href="/clothes/shirts/{{firstShirtPolo._id}}">
     <div class="publics">
       <img class="image" src="{{firstShirtPolo.img}}">
       <div>{{firstShirtPolo.name}}</div>
       <div>Цена: {{firstShirtPolo.price}}</div>
-
     </div>
   </a>
+  
 </div>
-
