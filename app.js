@@ -9,6 +9,8 @@ const authRouter = require('./routes/authRouter');
 const adminRouter = require('./routes/adminRouter');
 const orderRouter = require('./routes/orderRouter');
 const clothesRouter = require('./routes/clothesRouter');
+const basketRouter = require('./routes/basketRouter');
+
 // const bootstrap = require('bootstrap')
 
 const { sessionMiddle, checkSession } = require('./middleware/middleware');
@@ -48,6 +50,7 @@ app.use('/', indexRouter);
 app.use('/auth', authRouter);
 app.use('/order', orderRouter);
 app.use('/clothes', clothesRouter);
+app.use('/basket', basketRouter);
 app.use('/admin',checkSession, adminRouter);
 
 // app.all('*', (req, res, next) => {

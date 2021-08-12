@@ -1,6 +1,7 @@
 const express = require('express');
-const router = express.Router();
 const Form = require('../db/model/formModel');
+const PreOrder = require('../db/model/preOrder');
+const router = express.Router();
 
 
 router.get('/forms/:id', async (req, res) => {
@@ -9,9 +10,16 @@ router.get('/forms/:id', async (req, res) => {
   res.render('show', { oneForm, allForms });
 });
 
-router.post('/forms/:id', (req,res) => {
-  // const 
-  res.redirect();
+router.post('/forms/:id', async (req, res) => {
+  const idClothes = await Form.findById(req.params.id);
+  const myPreOrder = await PreOrder.create({
+    name: idClothes.name,
+    title: idClothes.title,
+    quantity: req.body.select,
+    color: idClothes.color,
+  });
+
+  res.redirect(`/basket/${myPreOrder._id}`);
 });
 
 router.get('/shirts/:id', async (req, res) => {
@@ -21,6 +29,12 @@ router.get('/shirts/:id', async (req, res) => {
 });
 
 router.get('/shorts/:id', async (req, res) => {
+  const oneForm = await Form.findById(req.params.id);
+  const allForms = await Form.find({ title: oneForm.title });
+  res.render('show', { oneForm, allForms });
+});
+
+router.get('/socks/:id', async (req, res) => {
   const oneForm = await Form.findById(req.params.id);
   const allForms = await Form.find({ title: oneForm.title });
   res.render('show', { oneForm, allForms });
