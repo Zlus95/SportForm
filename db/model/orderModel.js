@@ -4,17 +4,17 @@ const orderSchema = Schema({
   shirt: {
     type: Schema.Types.ObjectId,
     ref: 'Clothes',
-    required: true,
+    // required: true,
   },
   shorts:  {
     type:Schema.Types.ObjectId,
     ref: 'Clothes',
-    required: true,
+    // required: true,
   },
   socks:  {
     type: Schema.Types.ObjectId,
     ref: 'Clothes',
-    required: true,
+    // required: true,
   },
   userName: {type: String, required: true},
   userEmail: {type: String, required: true},
