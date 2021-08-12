@@ -4,7 +4,8 @@ const Orders = require("../db/model/orderModel");
 const Clothes = require("../db/model/clothesModel");
 
 router.get("/", async (req, res) => {
-  const orders = await Orders.find().populate({
+  const orders = await Orders.find().
+  populate({
     path: "shirt",
     populate: { path: "clothes", model: Clothes },
   }).populate({

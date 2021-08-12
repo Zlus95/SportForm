@@ -1,6 +1,7 @@
 const {Schema, model } = require('mongoose');
 
 const formSchema = Schema ({
+  title: String, 
   name:  {
     type: String,
     // required: true,
