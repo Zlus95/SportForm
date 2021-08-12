@@ -1,7 +1,9 @@
 const { Schema, model } = require('mongoose');
 
 const orderSchema = Schema({
+  orderNumber: Number,
   shirt: {
+
     type: Schema.Types.ObjectId,
     ref: 'Clothes',
     // required: true,
@@ -15,11 +17,41 @@ const orderSchema = Schema({
     type: Schema.Types.ObjectId,
     ref: 'Clothes',
     // required: true,
+
+    clothes: {
+      type: Schema.Types.ObjectId,
+      ref: 'Clothes',
+      required: true,
+    },
+    color: String,
+  },
+  shorts:  {
+    clothes: {
+      type: Schema.Types.ObjectId,
+      ref: 'Clothes',
+      required: true,
+    },
+    color: String,
+  },
+  socks:  {
+    clothes: {
+      type: Schema.Types.ObjectId,
+      ref: 'Clothes',
+      required: true,
+    },
+    color: String,
+
   },
   userName: {type: String, required: true},
   userEmail: {type: String, required: true},
   userPhone: {type: String, required: true},
   price: {type: Number, required: true},
+  players: [{
+    surname: String,
+    number: Number,
+    clothingSize: String
+  }]
+
  
 });
 

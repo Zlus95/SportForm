@@ -1,0 +1,9 @@
+.orderCard{
+  padding: 10px;
+  margin: 20px;
+  border: solid  black 2px;
+}
+
+.cardsContainer{
+  display: flex;
+}

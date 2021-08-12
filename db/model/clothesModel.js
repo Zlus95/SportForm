@@ -5,10 +5,12 @@ const clothesSchema = Schema ({
     type: String,
     // required: true,
   },
+
   color:  {
     type: String,
     // required: true,
   },
+  
   typeOfClothes:  {
     type: String,
     // required: true,
@@ -17,7 +19,7 @@ const clothesSchema = Schema ({
     type: Number,
     // required: true,
   },
-details:  {
+  details:  {
     type: String,
     // required: false,
   },
