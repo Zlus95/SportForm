@@ -3,9 +3,17 @@ const router = express.Router();
 const Orders = require("../db/model/orderModel");
 const PreOrder = require("../db/model/preOrder");
 
+const statuses = ["Доставка", "В обработке", "В работе"];
+
 router.get("/", async (req, res) => {
   const orders = await Orders.find();
-  res.render("admin", { orders: orders });
+  res.render("admin", { orders: orders, statuses });
+});
+
+router.get("/filter/:status", async (req, res) => {
+  const status = req.params.status !== 'all' ? {status: req.params.status} : {}
+  const orders = await Orders.find(status);
+  res.json({status: 200, orders});
 });
 
 router.get("/:id", async (req, res) => {
@@ -27,20 +35,21 @@ router.get("/:id", async (req, res) => {
       model: PreOrder,
     });
 
-  const statuses = ["Доставка", "В обработке", "В работе"];
+    
+    const sortedStatuses = statuses.reduce(
+      (acc, el) => {
+        if (el != order.status) acc.push(el);
+        return acc;
+      },
+      [order.status]
+      );
+      
+      res.render("order", { order, sortedStatuses });
+    });
+    
+    
 
-  const sortedStatuses = statuses.reduce(
-    (acc, el) => {
-      if (el != order.status) acc.push(el);
-      return acc;
-    },
-    [order.status]
-  );
-
-  res.render("order", { order, sortedStatuses });
-});
-
-router.put("/", async (req, res) => {
+    router.put("/", async (req, res) => {
   console.log(req.body);
   const _id = req.body._id;
   const status = req.body.status;
