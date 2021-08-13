@@ -1,27 +1,15 @@
 <h1>admin</h1>
 <div class="cardsContainer">
   {{#each orders}}
-<a href="/admin/{{_id}}">
+    <a href="/admin/{{_id}}">
       <div class="orderCard">
-      <div>Заказ № {{_id}}</div>
-      <div>Заказчик: {{userName}}</div>
-      <div>mail: {{userEmail}}</div>
-      <div>phone: {{userPhone}}</div>
-      <div>price: {{price}}</div>
-    </div>
-</a>
-  {{/each}}=
+        <div>Заказ № {{_id}}</div>
+        <div>Заказчик: {{userName}}</div>
+        <div>mail: {{userEmail}}</div>
+        <div>phone: {{userPhone}}</div>
+      </div>
+    </a>
+  {{/each}}
 </div>
 
-    {{!-- <div>
-      <div>Заказ № {{{_id}}}</div>
-      <div>{{shirt.clothes.typeOfClothes}}: {{shirt.clothes.name}}, price: {{shirt.clothes.price}}, color: {{shirt.color}}</div>
-      <div>{{shorts.clothes.typeOfClothes}}: {{shorts.clothes.name}}, price: {{shorts.clothes.price}}, color: {{shorts.color}}</div>
-      <div>{{socks.clothes.typeOfClothes}}: {{socks.clothes.name}}, price: {{socks.clothes.price}}, color: {{socks.color}}</div>
-      <div>{{userEmail}}</div>
-      <div>{{userPhone}}</div>
-      <div>{{price}}</div>
-      {{#each players}}
-      <p>{{surname}},{{number}}, {{clothingSize}}</p>
-      {{/each}}
-    </div> --}}
+

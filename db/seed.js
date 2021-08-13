@@ -194,7 +194,7 @@ const forms = [
     color: 'nawhite_royal',
     price: '900',
     img: 'https://2k-shop.ru/images/120033/white_royal_white.jpg',
-
+  {
     title: 'F1',
     name: 'form',
     color: 'light green',
@@ -323,8 +323,7 @@ const forms = [
   {
     title: 'F5',
     name: 'form',
-    color: 'blue',
-    price: '1,200',
+    color: 'blue',ыбрать количество
     img: 'https://olimpion.com/wp-content/uploads/2021/06/f43.jpg'
   },
   {
@@ -533,7 +532,7 @@ const forms = [
 //   },
 //   {
 //     title: 'Socks',
-//     name: 'Гетры футбольные',
+//     name: 'Гетры футбольыбрать количествоные',
 //     color: 'red',
 //     price: '300',
 //     img: 'https://2k-shop.ru/images/120350/red_white.jpg',
