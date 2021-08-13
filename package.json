@@ -21,6 +21,7 @@
     "eslint": "^7.32.0"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.1.0",
     "connect-mongo": "^4.4.1",
     "cookie-parser": "^1.4.5",
