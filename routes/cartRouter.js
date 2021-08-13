@@ -14,8 +14,8 @@ router.get('/', async (req, res) => {
     const eachShop = await PreOrder.findById(myCart.shops[i]);
     myShops.push(eachShop)
   }
-  // console.log(myShops);
-  res.render('cart', { myCart, myShops })
+  console.log(myShops);
+  res.render('cart', { myShops })
 });
 
 module.exports = router;

@@ -1,4 +1,21 @@
 <div class="body">
-  <div>Корзина</div>
-
+  <div>Ваши товары</div>
+  <div class="shopList">
+    <table>
+      <tr>
+        <td>Наименование</td>
+        <td>Цвет</td>
+        <td>Количество</td>
+        <td>Цена</td>
+      </tr>
+      {{#each myShops}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.color}}</td>
+        <td>{{this.quantity}}</td>
+        <td>Цена</td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
 </div>

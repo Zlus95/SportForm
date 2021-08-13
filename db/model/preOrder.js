@@ -5,6 +5,7 @@ const preOrderSchema = Schema({
   title: String,
   quantity: String,
   color: String,
+  img: String,
 });
 
 const preOrderModel = model('PreOrder', preOrderSchema);
