@@ -7,4 +7,6 @@
 .cardsContainer{
   display: flex;
 }
-
+.filter{
+  align-self: flex-start;
+}

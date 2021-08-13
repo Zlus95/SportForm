@@ -1,4 +1,15 @@
+<script src="/js/filter.js" defer></script>
 <div class="body">
+  <div class="d-flex flex-column jalign-items-start w-100">
+
+        <div class='filter'>
+  <select id="filterID">
+      <option value="all">Все заказы</option>
+      {{#each statuses}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
+  </select>
+  </div>
   <h1>admin</h1>
   <div class="cardsContainer">
     {{#each orders}}
@@ -8,8 +19,11 @@
         <div>Заказчик: {{userName}}</div>
         <div>mail: {{userEmail}}</div>
         <div>phone: {{userPhone}}</div>
+        <div>Статус: {{status}}</div>
       </div>
     </a>
     {{/each}}
+  </div>
+
   </div>
 </div>
