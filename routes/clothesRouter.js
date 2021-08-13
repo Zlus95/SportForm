@@ -85,16 +85,17 @@ router.get('/forms/:id', async (req, res) => {
 
 router.post('/forms/:id', async (req, res) => {
   const idClothes = await Form.findById(req.params.id);
-  // const src = req.body.formText;
-  // console.log(src);
+  console.log(idClothes);
+  const image = await idClothes.img;
+  console.log(image);
   const myPreOrder = await PreOrder.create({
     name: idClothes.name,
     title: idClothes.title,
     quantity: req.body.select,
     color: idClothes.color,
-    
+    img: image,
   });
-  // console.log(myPreOrder._id);
+  console.log(myPreOrder);
   const myCart = await Cart.findOne({ name: 'fjfjfgjfgxjgjgfjgxfj'});
   myCart.shops.push(myPreOrder._id);
   myCart.save();

@@ -1,21 +1,25 @@
 <div class="body">
-  <div>Ваши товары</div>
-  <div class="shopList">
-    <table>
-      <tr>
-        <td>Наименование</td>
-        <td>Цвет</td>
-        <td>Количество</td>
-        <td>Цена</td>
-      </tr>
-      {{#each myShops}}
-      <tr>
-        <td>{{this.name}}</td>
-        <td>{{this.color}}</td>
-        <td>{{this.quantity}}</td>
-        <td>Цена</td>
-      </tr>
-      {{/each}}
-    </table>
+  <div class="myCart">
+    <h2>Ваши товары</h2>
+    <div class="shopList">
+      <table>
+        <tr>
+          <td>Товар</td>
+          <td>Наименование</td>
+          <td>Цвет</td>
+          <td>Количество</td>
+          <td>Цена</td>
+        </tr>
+        {{#each myShops}}
+        <tr>
+          <td><img class="tdImg" src="{{this.img}}"></td>
+          <td>{{this.name}}</td>
+          <td>{{this.color}}</td>
+          <td>{{this.quantity}}</td>
+          <td>Цена</td>
+        </tr>
+        {{/each}}
+      </table>
+    </div>
   </div>
 </div>
