@@ -68,20 +68,19 @@
 
   {{{body}}}
   <footer>
-    <div class="line">
-      {{#if isLogin}}
-      <a id="logout" class="menu-link color" href="/auth/logout">Выйти</a>
-      {{else}}
-      <a id="login" class="menu-link color" href="/auth/login">Войти</a>
-      {{/if}}
-      <div class="contacts">
-        <ul>
-          <a class="dost" href="#dostavka">Доставка</a>
-          <a class="opl" href="#oplata">Оплата</a>
-          <a class="con" href="#contacts">Контакты</a>
-        </ul>
-      </div>
-    </div>
+    {{#if isLogin}}
+    <a id="logout" class="menu-link color" href="/auth/logout">Выйти</a>
+    <a class="dost" href="/admin">Личный кабинет администратора</a>
+    {{else}}
+    <a id="login" class="menu-link color" href="/auth/login">Войти</a>
+    {{/if}}
+    
+      <ul>
+        <a class="dost" href="#dostavka">Доставка</a>
+        <a class="opl" href="#oplata">Оплата</a>
+        <a class="con" href="#contacts">Контакты</a>
+      </ul>
+    
   </footer>
 </body>
 
