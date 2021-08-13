@@ -150,26 +150,18 @@ footer {
   height: 55px;
   width: 55px;
 }
-
-/* .carousel-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 500px;
+td {
+  width: 250px;
+  border: 4px double black;
 }
-
-.slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-} */
-
+.tdImg {
+  height: 70px;
+  width: 70px;
+}
 .caruselBody {
   display: flex;
   justify-content: center;
 }
-
 
 .shopList {
   display: flex;
@@ -180,6 +172,9 @@ footer {
 span {
   width: 100px;
  border: #4520ab solid 1px;
-  
 }
 
+.myCart {
+  display: flex;
+  flex-direction: column;
+}
