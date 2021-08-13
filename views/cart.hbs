@@ -2,6 +2,7 @@
   <div class="myCart">
     <h2>Ваши товары</h2>
     <div class="shopList">
+
       <table>
         <tr>
           <td>Товар</td>
@@ -11,15 +12,20 @@
           <td>Цена</td>
         </tr>
         {{#each myShops}}
-        <tr>
-          <td><img class="tdImg" src="{{this.img}}"></td>
-          <td>{{this.name}}</td>
-          <td>{{this.color}}</td>
-          <td>{{this.quantity}}</td>
-          <td>Цена</td>
+        <tr id="{{this._id}}">
+            <td><img class="tdImg" src="{{this.img}}"></td>
+            <td><input value="{{this.name}}"></td>
+            <td><input value="{{this.color}}"></td>
+            <td><input value="{{this.quantity}}"></td>
+            <td><input value="{{this.price}}"></td>
         </tr>
         {{/each}}
       </table>
+      <form action="/cart" method="POST">
+        <input class="inputmyShops" name="result" value="{{myShops}}">
+        <h3>Общая сумма заказа: {{resultSum}}</h3>
+        <button type="submit">Подтвердить</button>
+      </form>
     </div>
   </div>
 </div>

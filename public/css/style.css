@@ -5,7 +5,6 @@
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
-  /* margin-bottom: 100px; */
   min-height: 80vh;
 }
 header {
@@ -32,7 +31,6 @@ header {
   background-size: 250px 250px;
   font-size: 14px;
   text-align: center;
-  border: blueviolet solid 1px;
 }
 .titletop {
   margin-top: 20px;
@@ -50,7 +48,6 @@ header {
   align-items: center;
   flex-direction: column;
 }
-
 .form {
   flex-direction: column;
   display: flex;
@@ -70,8 +67,8 @@ header {
   height: 298px;
 }
 .formImage {
-  height: 500px;
-  width: 500px;
+  height: 490px;
+  width: 490px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   justify-content: space-between;
   align-items: stretch;
@@ -80,9 +77,14 @@ header {
   background-size: 250px 250px;
   font-size: 14px;
   text-align: center;
-  border: blueviolet solid 1px;
+  background-color: rgba(14, 14, 14, 0.228);
 }
-
+.imgForm {
+  height: 510px;
+  width: 510px;
+  background-color: rgba(14, 14, 14, 0.228);
+  margin-right: 20px;
+}
 .carusel {
   display: flex;
   flex-direction: row;
@@ -95,39 +97,32 @@ header {
   height: 98px;
   width: 98px;
 }
-
 .bodyForm {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .orderForm {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
 .btnInBasket {
   height: 50px;
 }
-
 .add {
   display: flex;
   flex-direction: column;
 }
-
 .showform {
   display: flex;
   flex-direction: row;
 }
-
 .contacts {
   margin-right: 100px;
 }
-
 footer {
   display: flex;
   width: 100%;
@@ -143,7 +138,6 @@ footer {
   margin-top: auto;
   bottom: 0px;
 }
-
 .cart {
   margin-left: 30px;
   margin-right: 15px;
@@ -162,40 +156,31 @@ td {
   display: flex;
   justify-content: center;
 }
-
 .shopList {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-
-span {
-  width: 100px;
- border: #4520ab solid 1px;
-}
-
-
 .dost{
   color: black;
 }
-
 .opl{
   color: black;
 }
-
 .con{
   color: black;
 }
-
 #login{
   color: black;
 }
-
 #logout{
   color: black;
-
+}
 .myCart {
   display: flex;
   flex-direction: column;
+}
 
+.inputmyShops {
+  visibility: hidden;
 }
