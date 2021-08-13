@@ -1,12 +1,13 @@
 <div class="bodyForm">
   <form class="orderForm" method="POST" action="/clothes/forms/{{oneForm._id}}">
-
-    <img class="formImage" src="{{oneForm.img}}">
+    <div class="imgForm">
+      <img class="formImage" src="{{oneForm.img}}">
+    </div>
     <div class="add">
       <div>{{oneForm.name}}</div>
-      <div>{{oneForm.price}}</div>
+      <div>Цена: {{oneForm.price}}</div>
+      <div>Количество</div>
       <select name="select" id="selectID">
-        <option>Выбрать количество</option>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>
@@ -30,7 +31,6 @@
       </select>
       <button class="btnInBasket" type="submit">Добавить в корзину</button>
     </div>
-
   </form>
 
   <div>Выбрать цвет</div>

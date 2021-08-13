@@ -1,8 +1,23 @@
-var myCarousel = document.querySelector('#carouselExampleControls')
-// var carousel = new bootstrap.Carousel(myCarousel)
+// const deleteBtn = document.querySelectorAll('.deleteBtn');
 
-// document.addEventListener("DOMContentLoaded", (event) => {
-//   console.log('Страница загружена');
-//   document.cookie = "value=John"
-//   console.log(document.cookie);
-// });
+// console.l?og(deleteBtn);
+
+// if (deleteBtn) {
+//   for (i = 0; i < deleteBtn.length; i++) {
+//     deleteBtn[i].addEventListener('click', async (event) => {
+//       event.preventDefault();
+//       const id = event.target.parentNode.parentNode.id;
+//       const response = await fetch(`/cart/${id}`, {
+//         method: 'DELETE',
+//       });
+//       const result = await response.json();
+
+//       event.target.parentNode.parentNode.remove();
+//       window.location('/cart');
+//     })
+
+//   }
+
+
+// }
+
