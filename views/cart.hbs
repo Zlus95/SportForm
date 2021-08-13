@@ -3,6 +3,7 @@
   <div class="shopList">
     <table>
       <tr>
+        <td>Товар</td>
         <td>Наименование</td>
         <td>Цвет</td>
         <td>Количество</td>
@@ -10,6 +11,7 @@
       </tr>
       {{#each myShops}}
       <tr>
+        <td>{{this.img}}</td>
         <td>{{this.name}}</td>
         <td>{{this.color}}</td>
         <td>{{this.quantity}}</td>
