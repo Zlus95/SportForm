@@ -1,18 +1,20 @@
+  <script src="/js/order.js" defer></script>
 <h1>admin</h1>
   <div>
     <div>Заказ № {{order._id}}</div>
-    <div>{{order.shirt.clothes.typeOfClothes}}: {{order.shirt.clothes.name}}, price: {{order.shirt.clothes.price}}, color: {{order.shirt.color}}</div>
-    <div>{{order.shorts.clothes.typeOfClothes}}: {{order.shorts.clothes.name}}, price: {{order.shorts.clothes.price}}, color: {{order.shorts.color}}</div>
-    <div>{{order.socks.clothes.typeOfClothes}}: {{order.socks.clothes.name}}, price: {{order.socks.clothes.price}}, color: {{order.socks.color}}</div>
+    <div>{{order.shirt.name}}: {{order.shirt.title}}, цвет: {{order.shirt.color}}, количество: {{order.shirt.quantity}}</div>
+    <div>{{order.shorts.name}}: {{order.shorts.title}}, цвет: {{order.shorts.color}}, количество: {{order.shorts.quantity}}</div>
+    <div>{{order.socks.name}}: {{order.socks.title}}, цвет: {{order.socks.color}}, количество: {{order.socks.quantity}}</div>
+    <div>{{order.form.name}}: {{order.form.title}}, цвет: {{order.form.color}}, количество: {{order.form.quantity}}</div>
     <div>{{order.userEmail}}</div>
     <div>{{order.userPhone}}</div>
-    <div>{{order.price}}</div>
-      {{#each order.players}}
-      <p>{{surname}},{{number}},{{clothingSize}}</p>
+      {{#each order.player}}
+      <div>{{lastName}},{{number}},{{size}}<div>
       {{/each}}
-    <select id="selectID" aria-placeholder="Статус">
-      <option value=”GO”>Ждет обработки</option>
-      <option value=”VR”>В работе</option>
-      <option value=”DO”>Доставка</option>
+    <select id="selectID" data-order-id={{order._id}}>
+      {{#each sortedStatuses}}
+      <option value="{{this}}">{{this}}</option>
+      {{/each}}
     </select>
   </div>
+  
