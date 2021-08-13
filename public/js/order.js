@@ -14,5 +14,4 @@ statusSelect.addEventListener("change", async ({ target }) => {
   });
 
   const content = await response.json();
-  console.log(content);
 });
