@@ -1,6 +1,7 @@
-<h1>admin</h1>
-<div class="cardsContainer">
-  {{#each orders}}
+<div class="body">
+  <h1>admin</h1>
+  <div class="cardsContainer">
+    {{#each orders}}
     <a href="/admin/{{_id}}">
       <div class="orderCard">
         <div>Заказ № {{_id}}</div>
@@ -9,7 +10,6 @@
         <div>phone: {{userPhone}}</div>
       </div>
     </a>
-  {{/each}}
+    {{/each}}
+  </div>
 </div>
-
-

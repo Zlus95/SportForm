@@ -1,20 +1,28 @@
+<div class="body">
   <script src="/js/order.js" defer></script>
-<h1>admin</h1>
+  <h1>admin</h1>
   <div>
     <div>Заказ № {{order._id}}</div>
-    <div>{{order.shirt.name}}: {{order.shirt.title}}, цвет: {{order.shirt.color}}, количество: {{order.shirt.quantity}}</div>
-    <div>{{order.shorts.name}}: {{order.shorts.title}}, цвет: {{order.shorts.color}}, количество: {{order.shorts.quantity}}</div>
-    <div>{{order.socks.name}}: {{order.socks.title}}, цвет: {{order.socks.color}}, количество: {{order.socks.quantity}}</div>
-    <div>{{order.form.name}}: {{order.form.title}}, цвет: {{order.form.color}}, количество: {{order.form.quantity}}</div>
+    <div>{{order.shirt.name}}: {{order.shirt.title}}, цвет: {{order.shirt.color}}, количество: {{order.shirt.quantity}}
+    </div>
+    <div>{{order.shorts.name}}: {{order.shorts.title}}, цвет: {{order.shorts.color}}, количество:
+      {{order.shorts.quantity}}</div>
+    <div>{{order.socks.name}}: {{order.socks.title}}, цвет: {{order.socks.color}}, количество: {{order.socks.quantity}}
+    </div>
+    <div>{{order.form.name}}: {{order.form.title}}, цвет: {{order.form.color}}, количество: {{order.form.quantity}}
+    </div>
     <div>{{order.userEmail}}</div>
     <div>{{order.userPhone}}</div>
-      {{#each order.player}}
-      <div>{{lastName}},{{number}},{{size}}<div>
-      {{/each}}
+    {{#each order.player}}
+    <div>{{lastName}},{{number}},{{size}}</div>
+    {{/each}}
     <select id="selectID" data-order-id={{order._id}}>
       {{#each sortedStatuses}}
       <option value="{{this}}">{{this}}</option>
       {{/each}}
     </select>
+
+
+
   </div>
-  
+</div>
