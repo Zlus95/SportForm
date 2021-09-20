@@ -1,3 +1,3 @@
 # SportForm
-First project from the customer
+Project from the customer
 Данный сервис реализован как интернет-магазин. Помогает подбирать спортивную одежду для команды.
